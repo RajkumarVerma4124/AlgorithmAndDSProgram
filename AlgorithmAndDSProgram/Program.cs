@@ -13,6 +13,9 @@ namespace AlgorithmAndDSProgram
             //Displaying welcome message
             Console.WriteLine("Welcome to the data structure and algorithm programs");
             Console.ReadLine();
+
+            //Calling the string permutation method
+            PermutationProgram.StringPermuation();
         }
     }
 }
