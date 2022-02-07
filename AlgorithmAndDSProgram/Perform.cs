@@ -35,5 +35,30 @@ namespace AlgorithmAndDSProgram
                 }
             }
         }
+
+        //Generics method of binary search for different datatype 
+        public static bool BinarySearch<T>(T[] list, T search) where T : IComparable
+        {
+            int startPos = 0;
+            int endPos = list.Length - 1;
+            while (startPos <= endPos)
+            {
+                int midLen = startPos + (endPos - startPos) / 2;
+                int result = search.CompareTo(list[midLen]);
+
+                //Checking If the string is present at the middle 
+                if (result == 0)
+                    return true;
+
+                // If string is greater, ignore left half
+                if (result > 0)
+                    startPos = midLen + 1;
+                else
+                    // If string is smaller, ignore right half
+                    endPos = midLen - 1;
+            }
+
+            return false;
+        }
     }
 }
