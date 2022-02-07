@@ -46,6 +46,7 @@
     <Compile Include="BinarySearchProgram.cs" />
     <Compile Include="BubbleSortProgram.cs" />
     <Compile Include="InsertionSortProgram.cs" />
+    <Compile Include="MergeSortProgram.cs" />
     <Compile Include="Perform.cs" />
     <Compile Include="PermutationProgram.cs" />
     <Compile Include="Program.cs" />

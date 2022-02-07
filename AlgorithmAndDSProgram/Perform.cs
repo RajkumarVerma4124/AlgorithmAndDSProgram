@@ -96,6 +96,81 @@ namespace AlgorithmAndDSProgram
                     }
         }
 
+        //Method to merging two subarrays of []arr first subarray is arr[firstPos..midLen Second subarray is arr[midLen+1..endPos]
+        public static void MSort<T>(T[] arr, int firstPos, int midLen, int endPos) where T : IComparable
+        {
+            // Finding the sizes of two subarrays to be merged
+            int sizeArrOne = midLen - firstPos + 1;
+            int sizeArrTwo = endPos - midLen;
+
+            // Creating temp arrays
+            T[] leftArr = new T[sizeArrOne];
+            T[] rightArr = new T[sizeArrTwo];
+
+            //Declaring local variables
+            int i, j;
+
+            // Copying data to temp arrays
+            for (i = 0; i < sizeArrOne; ++i)
+                leftArr[i] = arr[firstPos + i];
+            for (j = 0; j < sizeArrTwo; ++j)
+                rightArr[j] = arr[midLen + 1 + j];
+
+            // Initializing indexes of first and second subarrays
+            i = 0;
+            j = 0;
+
+            //Initializing index of merge subarray array
+            int k = firstPos;
+            while (i < sizeArrOne && j < sizeArrTwo)
+            {
+                if (leftArr[i].CompareTo(rightArr[j]) <= 0)
+                {
+                    arr[k] = leftArr[i];
+                    i++;
+                }
+                else
+                {
+                    arr[k] = rightArr[j];
+                    j++;
+                }
+                k++;
+            }
+
+            // Copying remaining elements of leftArray[] if any
+            while (i < sizeArrOne)
+            {
+                arr[k] = leftArr[i];
+                i++;
+                k++;
+            }
+
+            // Copying remaining elements of rightArray[] if any
+            while (j < sizeArrTwo)
+            {
+                arr[k] = rightArr[j];
+                j++;
+                k++;
+            }
+        }
+
+        //Method to recursively sorts two array merge them to produce a sorted array
+        public static void Sort<T>(T[] arr, int firstPos, int endPos) where T : IComparable
+        {
+            if (firstPos < endPos)
+            {
+                // Finding the middle point to divide array into two havles
+                int midLen = firstPos + (endPos - firstPos) / 2;
+
+                //Sorting first and second halves
+                Sort(arr, firstPos, midLen);
+                Sort(arr, midLen + 1, endPos);
+
+                // Merging the sorted halves
+                Perform.MSort(arr, firstPos, midLen, endPos);
+            }
+        }
+
         //Method to print an array
         public static void PrintArray<T>(T[] str, int len)
         {
