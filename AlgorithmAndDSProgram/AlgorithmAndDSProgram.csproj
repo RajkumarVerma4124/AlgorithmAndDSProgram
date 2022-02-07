@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinarySearchProgram.cs" />
+    <Compile Include="InsertionSortProgram.cs" />
     <Compile Include="Perform.cs" />
     <Compile Include="PermutationProgram.cs" />
     <Compile Include="Program.cs" />

@@ -60,5 +60,32 @@ namespace AlgorithmAndDSProgram
 
             return false;
         }
+
+        //Method to Sort the array of string according to lengths by implementing insertion sort
+        public static void ISort<T>(T[] arrGen) where T : IComparable
+        {
+            int arrLen = arrGen.Length;
+            for (int i = 1; i < arrLen; ++i)
+            {
+                T temp = arrGen[i];
+                int j = i - 1;
+
+                // Move elements of arr[0..i-1], that are greater than key to one position ahead of their current position
+                while (j >= 0 && arrGen[j].CompareTo(temp) > 0)
+                {
+                    arrGen[j + 1] = arrGen[j];
+                    j--;
+                }
+                arrGen[j + 1] = temp;
+            }
+        }
+
+        //Method to print an array
+        public static void PrintArray<T>(T[] str, int len)
+        {
+            for (int i = 0; i <= len; i++)
+                Console.Write(str[i] + " ");
+            Console.WriteLine();
+        }
     }
 }
