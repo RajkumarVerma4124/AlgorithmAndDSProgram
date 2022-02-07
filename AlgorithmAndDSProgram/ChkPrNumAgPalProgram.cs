@@ -14,7 +14,7 @@ namespace AlgorithmAndDSProgram
             Console.WriteLine("Finding The Prime Numbers That Are Anagram And Palindrome\n");
             int checkNum = 0;
             List<string> primeAgOrPal = new List<string>();
-            Console.Write("Enter The End Range Of Number Between 100 to 1000 : ");
+            Console.Write("Enter The End Range Of Number : ");
             int endRange = int.Parse(Console.ReadLine());
             Console.WriteLine("The prime number which are palindrome : ");
             while (checkNum <= endRange)
