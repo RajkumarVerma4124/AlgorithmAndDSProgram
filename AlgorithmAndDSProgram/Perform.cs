@@ -195,6 +195,27 @@ namespace AlgorithmAndDSProgram
             return true;
         }
 
+        //Method to print the prime numbers in the given range
+        public static int PrintPrimeNum(int startNum, int endNum)
+        {
+            Console.WriteLine("Prime numbers between " + startNum + " and " + endNum + " are : ");
+            int count;
+            //loop for finding and printing all prime numbers between given range
+            for (int i = startNum; i <= endNum; i++)
+            {
+                //logic for checking number is prime or not
+                count = 0;
+                for (int j = 1; j <= i; j++)
+                {
+                    if (i % j == 0)
+                        count++;
+                }
+                if (count == 2)
+                    Console.Write(i + " : ");
+            }
+            Console.WriteLine();
+            return default;
+        }
 
         //Method to print an array
         public static void PrintArray<T>(T[] str, int len)

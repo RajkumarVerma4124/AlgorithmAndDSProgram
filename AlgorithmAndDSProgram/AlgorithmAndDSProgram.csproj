@@ -50,6 +50,7 @@
     <Compile Include="MergeSortProgram.cs" />
     <Compile Include="Perform.cs" />
     <Compile Include="PermutationProgram.cs" />
+    <Compile Include="PrimeNumberProgram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

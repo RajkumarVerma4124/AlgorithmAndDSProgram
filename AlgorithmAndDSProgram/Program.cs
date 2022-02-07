@@ -16,7 +16,8 @@ namespace AlgorithmAndDSProgram
 
             while (true)
             {
-                Console.WriteLine("1: String Permutation \n2: Binary String Search \n3: Insertion Sort \n4: Bubble Sort \n5: Merge Sort \n6: Anagram Detection \n7: Exit");
+                Console.WriteLine("1: String Permutation \n2: Binary String Search \n3: Insertion Sort \n4: Bubble Sort \n5: Merge Sort \n6: Anagram Detection \n7: Print Prime Numbers" +
+                                "\n8: Exit");
                 Console.Write("Enter a choice from above : ");
                 int choice = int.Parse(Console.ReadLine());
                 switch (choice)
@@ -46,6 +47,10 @@ namespace AlgorithmAndDSProgram
                         AnagramProgram.AnagramDetection();
                         break;
                     case 7:
+                        //Calling the print prime number method
+                        PrimeNumberProgram.PrimeNumbers();
+                        break;
+                    case 8:
                         Environment.Exit(0);
                         break;
                     default:
