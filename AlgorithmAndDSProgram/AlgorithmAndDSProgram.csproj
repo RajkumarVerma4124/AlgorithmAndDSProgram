@@ -46,6 +46,7 @@
     <Compile Include="AnagramProgram.cs" />
     <Compile Include="BinarySearchProgram.cs" />
     <Compile Include="BubbleSortProgram.cs" />
+    <Compile Include="ChkPrNumAgPalProgram.cs" />
     <Compile Include="InsertionSortProgram.cs" />
     <Compile Include="MergeSortProgram.cs" />
     <Compile Include="Perform.cs" />

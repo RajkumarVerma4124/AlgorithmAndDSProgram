@@ -217,6 +217,41 @@ namespace AlgorithmAndDSProgram
             return default;
         }
 
+        //Checking If Given Number Is Prime Number Or Not
+        public static bool IsPrime(int pNum)
+        {
+            if (pNum == 0 || pNum == 1)
+                return false;
+            for (int i = 2; i < pNum; i++)
+            {
+                if (pNum % i == 0)
+                    return false;
+            }
+            return true;
+        }
+
+        //Checking a given number is palindrome or not
+        public static bool IsPalindrome(int palNum)
+        {
+            if (palNum < 10)
+                return false;
+            //Converting integer to string
+            string numStr = Convert.ToString(palNum);
+            //Converting string to char array
+            char[] numArr = numStr.ToCharArray();
+            string tempStr = string.Empty;
+            //Reversing the string
+            for (int i = numArr.Length - 1; i >= 0; i--)
+            {
+                // Append each character to the temp string.
+                tempStr += numArr[i];
+            }
+            if (tempStr.Equals(numStr))
+                return true;
+            else
+                return false;
+        }
+
         //Method to print an array
         public static void PrintArray<T>(T[] str, int len)
         {
