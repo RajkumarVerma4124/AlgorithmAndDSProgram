@@ -171,6 +171,31 @@ namespace AlgorithmAndDSProgram
             }
         }
 
+        //Method to check whether given two strings are anagram of each other
+        public static bool IsAnagram(string firstStr, string secStr)
+        {
+            //Checking the length of the string
+            if (firstStr.Length != secStr.Length)
+                return false;
+
+            //Converting the string to charArray
+            char[] firstChar = firstStr.ToLower().ToCharArray();
+            char[] secChar = secStr.ToLower().ToCharArray();
+
+            //Sorting the character array
+            Array.Sort(firstChar);
+            Array.Sort(secChar);
+
+            //Checking each character and position
+            for (int i = 0; i < firstChar.Length; i++)
+            {
+                if (firstChar[i] != secChar[i])
+                    return false;
+            }
+            return true;
+        }
+
+
         //Method to print an array
         public static void PrintArray<T>(T[] str, int len)
         {
