@@ -80,6 +80,22 @@ namespace AlgorithmAndDSProgram
             }
         }
 
+
+        //Method to sort numbers using bubble sort
+        public static void BSort<T>(T[] arr) where T : IComparable
+        {
+            int arrLen = arr.Length;
+            for (int i = 0; i < arrLen - 1; i++)
+                for (int j = 0; j < arrLen - i - 1; j++)
+                    if (arr[j].CompareTo(arr[j + 1]) > 0)
+                    {
+                        // swap temp and arr[i] 
+                        T temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+        }
+
         //Method to print an array
         public static void PrintArray<T>(T[] str, int len)
         {

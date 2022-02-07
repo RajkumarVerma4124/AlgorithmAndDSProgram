@@ -16,7 +16,7 @@ namespace AlgorithmAndDSProgram
 
             while (true)
             {
-                Console.WriteLine("1: String Permutation \n2: Binary String Search \n3: Insertion Sort \n4: Exit");
+                Console.WriteLine("1: String Permutation \n2: Binary String Search \n3: Insertion Sort \n4: Bubble Sort \n5: Exit");
                 Console.Write("Enter a choice from above : ");
                 int choice = int.Parse(Console.ReadLine());
                 switch (choice)
@@ -34,6 +34,10 @@ namespace AlgorithmAndDSProgram
                         InsertionSortProgram.InsertionSort();
                         break;
                     case 4:
+                        //Calling the bubble sort string method
+                        BubbleSortProgram.BubbleSort();
+                        break;
+                    case 5:
                         Environment.Exit(0);
                         break;
                     default:
