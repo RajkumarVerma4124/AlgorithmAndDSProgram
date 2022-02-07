@@ -47,6 +47,8 @@
     <Compile Include="BinarySearchProgram.cs" />
     <Compile Include="BubbleSortProgram.cs" />
     <Compile Include="ChkPrNumAgPalProgram.cs" />
+    <Compile Include="RegexPattern.cs" />
+    <Compile Include="CustomizeMessageProgram.cs" />
     <Compile Include="FindNumberProgram.cs" />
     <Compile Include="InsertionSortProgram.cs" />
     <Compile Include="MergeSortProgram.cs" />
