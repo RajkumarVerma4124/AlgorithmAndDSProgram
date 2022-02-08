@@ -14,7 +14,7 @@ namespace AlgorithmAndDSProgram.DataStructrures
             //Calling the method to read and write file data into unorder or order list
             while(true)
             {
-                Console.WriteLine("\n1: Read String File And Add Into Unorderd List \n2: Read String Of Numbres File And Add Into Ordered List In Integer Format\n3: Go Back");
+                Console.WriteLine("\n1: Read String File And Add Into Unorderd List \n2: Read String Of Numbres File And Add Into Ordered List In Integer Format \n3: Simple Balance Paranthesis Program \n4: Go Back");
                 Console.Write("Enter a choice from above : ");
                 switch(int.Parse(Console.ReadLine()))
                 {
@@ -27,6 +27,10 @@ namespace AlgorithmAndDSProgram.DataStructrures
                         ReadIntegerFile.ReadIntFile();
                         break;
                     case 3:
+                        //Method to call simple balance paranthesis program
+                        SimpleBalParenthesis.SimpleBalance();
+                        break;
+                    case 4:
                         Program.Main(null);
                         break;
                     default:

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AlgorithmAndDSProgram.DataStructrures;
 
 namespace AlgorithmAndDSProgram
 {
@@ -247,6 +248,27 @@ namespace AlgorithmAndDSProgram
                 tempStr += numArr[i];
             }
             if (tempStr.Equals(numStr))
+                return true;
+            else
+                return false;
+        }
+
+        //Method to perform stack operation for simple balance program
+        public static bool CheckParentheses(string parStr)
+        {
+            StackProgram<char> stack = new StackProgram<char>();
+
+            char[] parChar = parStr.ToCharArray();
+
+            for (int i = 0; i < parStr.Length; i++)
+            {
+                if (parChar[i] == '(')
+                    stack.Push(parChar[i]);
+                else if (parChar[i] == ')')
+                    stack.Pop();
+            }
+
+            if (stack.IsEmpty())
                 return true;
             else
                 return false;

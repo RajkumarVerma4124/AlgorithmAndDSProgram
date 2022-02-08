@@ -52,6 +52,8 @@
     <Compile Include="DataStructrures\OrderedList.cs" />
     <Compile Include="DataStructrures\ReadIntegerFile.cs" />
     <Compile Include="DataStructrures\ReadTextFile.cs" />
+    <Compile Include="DataStructrures\SimpleBalParenthesis.cs" />
+    <Compile Include="DataStructrures\StackProgram.cs" />
     <Compile Include="DataStructrures\UnorderedList.cs" />
     <Compile Include="RegexPattern.cs" />
     <Compile Include="CustomizeMessageProgram.cs" />
