@@ -47,6 +47,10 @@
     <Compile Include="BinarySearchProgram.cs" />
     <Compile Include="BubbleSortProgram.cs" />
     <Compile Include="ChkPrNumAgPalProgram.cs" />
+    <Compile Include="DataStructrures\DSProgram.cs" />
+    <Compile Include="DataStructrures\Node.cs" />
+    <Compile Include="DataStructrures\ReadTextFile.cs" />
+    <Compile Include="DataStructrures\UnorderedList.cs" />
     <Compile Include="RegexPattern.cs" />
     <Compile Include="CustomizeMessageProgram.cs" />
     <Compile Include="FindNumberProgram.cs" />
@@ -62,6 +66,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DataStructrures\InputFile.txt" />
     <Content Include="RandomText.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

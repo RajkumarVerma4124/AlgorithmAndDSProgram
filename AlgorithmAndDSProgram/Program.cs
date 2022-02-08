@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AlgorithmAndDSProgram.DataStructrures;
 
 namespace AlgorithmAndDSProgram
 {
@@ -17,7 +18,7 @@ namespace AlgorithmAndDSProgram
             while (true)
             {
                 Console.WriteLine("1: String Permutation \n2: Binary String Search \n3: Insertion Sort \n4: Bubble Sort \n5: Merge Sort \n6: Anagram Detection \n7: Print Prime Numbers" +
-                                "\n8: Check Prime Number i.e Angaram and Palindrome \n9: Find The Guessing Number \n10: Customize Message \n11: Exit");
+                                "\n8: Check Prime Number i.e Angaram and Palindrome \n9: Find The Guessing Number \n10: Customize Message \n11: Data Structures \n12: Exit");
                 Console.Write("Enter a choice from above : ");
                 int choice = int.Parse(Console.ReadLine());
                 switch (choice)
@@ -63,6 +64,10 @@ namespace AlgorithmAndDSProgram
                         CustomizeMessageProgram.PrintMessage();
                         break;
                     case 11:
+                        //Calling the data structure method
+                        DSProgram.DataStructure();
+                        break;
+                    case 12:
                         Environment.Exit(0);
                         break;
                     default:
