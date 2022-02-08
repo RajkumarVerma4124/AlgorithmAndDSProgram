@@ -13,7 +13,6 @@ namespace AlgorithmAndDSProgram
         {
             //Displaying welcome message
             Console.WriteLine("Welcome to the data structure and algorithm programs");
-            Console.ReadLine();
 
             while (true)
             {

@@ -49,6 +49,8 @@
     <Compile Include="ChkPrNumAgPalProgram.cs" />
     <Compile Include="DataStructrures\DSProgram.cs" />
     <Compile Include="DataStructrures\Node.cs" />
+    <Compile Include="DataStructrures\OrderedList.cs" />
+    <Compile Include="DataStructrures\ReadIntegerFile.cs" />
     <Compile Include="DataStructrures\ReadTextFile.cs" />
     <Compile Include="DataStructrures\UnorderedList.cs" />
     <Compile Include="RegexPattern.cs" />

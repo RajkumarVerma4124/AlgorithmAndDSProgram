@@ -3,28 +3,56 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 
 namespace AlgorithmAndDSProgram.DataStructrures
 {
-    public class UnorderedList<G> where G : IComparable
+    public class OrderedList<G> where G : IComparable
     {
         public Node<G> head;
 
-        public UnorderedList()
+        public OrderedList()
         {
             this.head = null;
         }
 
         //Method for creating a empty list
-        public UnorderedList<G> List()
+        public OrderedList<G> List()
         {
-            UnorderedList<G> list = new UnorderedList<G>();
-            return list;
+            OrderedList<G> newList = new OrderedList<G>();
+            return newList;
         }
 
-        //Refactored the lastadd method to take element to get in sorted order
-        public void AddLast(G data)
+        //Method to add the element in sorted order
+        public void Add(G data)
+        {
+            Node<G> newNode = new Node<G>(data);
+            Node<G> currentNode = this.head, previousNode = null;
+            while (currentNode != null && currentNode.data.CompareTo(newNode.data) < 0)
+            {
+                previousNode = currentNode;
+                currentNode = currentNode.next;
+            }
+            if (previousNode == null)
+                this.head = newNode;
+            else
+            {
+                previousNode.next = newNode;
+            }
+            newNode.next = currentNode;
+            Console.WriteLine("{0} is inserted into linklist \n", newNode.data);
+        }
+
+        //Creating add first method to add the element at first position i.e head
+        public void AddFirst(G data)
+        {
+            Node<G> newNode = new Node<G>(data);
+            newNode.next = this.head;
+            this.head = newNode;
+            Console.WriteLine("{0} is inserted into linklist \n", newNode.data);
+        }
+
+        //Creating append method to add the element at last position i.e tail
+        public void Append(G data)
         {
             Node<G> node = new Node<G>(data);
             if (this.head == null)
@@ -41,21 +69,6 @@ namespace AlgorithmAndDSProgram.DataStructrures
                 temp.next = node;
             }
             Console.Write("{0} is added into linklist \n", node.data);
-        }
-
-        //Creating add first method to add the element at first position i.e head
-        public void AddFirst(G data)
-        {
-            Node<G> newNode = new Node<G>(data);
-            newNode.next = this.head;
-            this.head = newNode;
-            Console.WriteLine("{0} is inserted into linklist \n", newNode.data);
-        }
-
-        //Creating append method to add the element at last position i.e tail
-        public void Append(G data)
-        {
-           AddLast(data);
         }
 
         //Inserting the element at particular index
