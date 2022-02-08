@@ -74,7 +74,7 @@ namespace AlgorithmAndDSProgram
         //Method to check and take the date time format
         public bool DateTime()
         {
-            Console.Write("Enter the Phone Number In 91 123456787 Format : ");
+            Console.Write("Enter the date and time in dd/mm/yyyy format : ");
             dtTime = Console.ReadLine();
             if (dateTime.IsMatch(dtTime))
                 return true;
