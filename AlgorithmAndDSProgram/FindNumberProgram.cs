@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace AlgorithmAndDSProgram
 {
+    /// <summary>
+    /// Guess to find your number
+    /// </summary>
     public class FindNumberProgram
     {
+        //Initialing the variables
         public static int firstNum = 0, lastNum = 100;
         public static bool foundNum = false;
+        
+        //Method to guess the number
         public static void GuessNumber()
         {
             Console.WriteLine($"Think a number between {firstNum} - {lastNum} ");
@@ -19,6 +25,8 @@ namespace AlgorithmAndDSProgram
                 CheckValue(midValue);
             }
         }
+
+        //Method to check the guessed value and asked the user if its true
         public static void CheckValue(int midValue)
         {
             Console.WriteLine($"\nPress \n1: If your number is {midValue}\n2: If your number is low \n3: If your number is high");

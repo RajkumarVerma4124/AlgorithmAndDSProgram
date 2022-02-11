@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlgorithmAndDSProgram.DataStructrures
 {
-    public class StackProgram<G> where G : IComparable
+    public class StackProgram<G>
     {
         private Node<G> top;
         public StackProgram()
@@ -43,6 +43,19 @@ namespace AlgorithmAndDSProgram.DataStructrures
                     temp = temp.next;
                 }
             }
+        }
+
+        //Method to display the size of the queue
+        public int Size()
+        {
+            int size = 0;
+            Node<G> temp = this.top;
+            while (temp != null)
+            {
+                size++;
+                temp = temp.next;
+            }
+            return size;
         }
 
         //Method to show the top value in stack(UC2)

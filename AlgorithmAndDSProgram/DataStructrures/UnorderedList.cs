@@ -185,6 +185,14 @@ namespace AlgorithmAndDSProgram.DataStructrures
             return size;
         }
 
+        //Method to check if linklist is empty or not
+        public bool IsEmpty()
+        {
+            if (this.head == null)
+                return true;
+            return false;
+        }
+
         //Displaying the data from linklist nodes
         public void Display()
         {
