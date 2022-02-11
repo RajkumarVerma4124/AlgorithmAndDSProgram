@@ -47,9 +47,20 @@
     <Compile Include="BinarySearchProgram.cs" />
     <Compile Include="BubbleSortProgram.cs" />
     <Compile Include="ChkPrNumAgPalProgram.cs" />
+    <Compile Include="DataStructrures\BinarySearchTree.cs" />
+    <Compile Include="DataStructrures\CalenderProgram.cs" />
+    <Compile Include="DataStructrures\HashingNumber.cs" />
+    <Compile Include="DataStructrures\HashSlots.cs" />
+    <Compile Include="DataStructrures\PalindromeChecker.cs" />
+    <Compile Include="DataStructrures\PrimeNumAgQueue.cs" />
+    <Compile Include="DataStructrures\PrimeNumAgStack.cs" />
+    <Compile Include="DataStructrures\PrimeNumAnagramProgram.cs" />
+    <Compile Include="DataStructrures\PrimeNumber2DProgram.cs" />
+    <Compile Include="DataStructrures\SimulateBanking.cs" />
     <Compile Include="DataStructrures\DSProgram.cs" />
     <Compile Include="DataStructrures\Node.cs" />
     <Compile Include="DataStructrures\OrderedList.cs" />
+    <Compile Include="DataStructrures\Queue.cs" />
     <Compile Include="DataStructrures\ReadIntegerFile.cs" />
     <Compile Include="DataStructrures\ReadTextFile.cs" />
     <Compile Include="DataStructrures\SimpleBalParenthesis.cs" />
@@ -65,12 +76,14 @@
     <Compile Include="PrimeNumberProgram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataStructrures\StackLinkList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataStructrures\InputFile.txt" />
+    <Content Include="DataStructrures\NumberSlots.txt" />
     <Content Include="RandomText.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

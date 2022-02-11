@@ -11,6 +11,7 @@ namespace AlgorithmAndDSProgram
     {
         public static void BinarySearchWord()
         {
+            //Reading the data from the file and adding to the array
             Console.WriteLine("Binary Search Program To Search Words From File\n");
             string[] words = null;
             Console.WriteLine("Reading words from the file");
@@ -24,6 +25,7 @@ namespace AlgorithmAndDSProgram
             //Sorting the words list
             Array.Sort(words);
 
+            //Printing the words from the array
             Console.Write("After sorting the list : ");
             foreach (string word in words)
             {
@@ -31,6 +33,7 @@ namespace AlgorithmAndDSProgram
             }
             Console.WriteLine();
 
+            //Searching the words given by user
             Console.Write("Enter a word to search : ");
             string search = Console.ReadLine();
             bool result = Perform.BinarySearch(words, search);

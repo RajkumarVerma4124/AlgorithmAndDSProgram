@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
+using System.IO;
 using AlgorithmAndDSProgram.DataStructrures;
 
 namespace AlgorithmAndDSProgram
@@ -25,7 +27,9 @@ namespace AlgorithmAndDSProgram
         public static void StringPermutation(string permStr, int start, int end)
         {
             if (start == end)
+            {
                 Console.WriteLine(" "+permStr);
+            }   
             else
             {
                 for (int i = start; i <= end; i++)
@@ -34,6 +38,27 @@ namespace AlgorithmAndDSProgram
                     StringPermutation(permStr, start + 1, end);
                     permStr = Swap(permStr, start, i);
                 }
+            }
+        }
+
+        //Method to check the arrays of two string are equal or not
+        public static bool CheckTwoStrings<T>(T[] strOne, T[] strTwo) 
+        {
+            int strLenRes = strOne.Length.CompareTo(strTwo.Length);
+            if (strLenRes < 0 || strLenRes > 0)
+                return false;
+            else
+            {
+                //Checking the char arrays indexes at every position
+                for (int i = 0; i < strOne.Length; i++)
+                {
+                    for (int j = 0; j < strTwo.Length; j++)
+                    {
+                        if (strOne[i].Equals(strTwo[j]) == true)
+                            return true;
+                    }     
+                }
+                return default;
             }
         }
 
@@ -280,6 +305,57 @@ namespace AlgorithmAndDSProgram
             for (int i = 0; i <= len; i++)
                 Console.Write(str[i] + " ");
             Console.WriteLine();
+        }
+
+        //Method to create a calender using 2d array
+        public static void Calendar(int month, int year)
+        {
+            Calendar calendar = CultureInfo.InvariantCulture.Calendar;
+            int totalDays = calendar.GetDaysInMonth(year, month);
+            int day = DayOfWeek(month, 1, year);
+            int count = 1;
+            int[,] calendarArray = new int[6, 7];
+            Console.WriteLine("Sun\tMon\tTue\tWed\tThr\tFri\tSat");
+
+            //Storing the days in the 2d calender array where rows = 6 cols = 7 
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    if (i == 0 && j < day)
+                        calendarArray[0, j] = 0;
+                    else
+                    {
+                        if (count <= totalDays)
+                        {
+                            calendarArray[i, j] = count;
+                            count++;
+                        }
+                    }
+                }
+            }
+            //Printing the days of the given month
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    if (calendarArray[i, j] == 0)
+                        Console.Write("\t");
+                    else
+                        Console.Write(calendarArray[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        //Method to get the day of week
+        public static int DayOfWeek(int m, int d, int y)
+        {
+            int y0 = y - (14 - m) / 12;
+            int x = y0 + (y0 / 4) - (y0 / 100) + (y0 / 400);
+            int m0 = m + 12 * ((14 - m) / 12) - 2;
+            int d0 = (d + x + ((31 * m0) / 12)) % 7;
+            return d0;
         }
     }
 }

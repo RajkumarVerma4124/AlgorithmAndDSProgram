@@ -8,8 +8,12 @@ namespace AlgorithmAndDSProgram
 {
     public class CustomizeMessageProgram
     {
+        /// <summary>
+        /// Customizing the message
+        /// </summary>
         public static void PrintMessage()
         {
+            //Checking the given user details are valid
             RegexPattern regexPattern = new RegexPattern();
             if(regexPattern.FirstName() == true)
                 Console.WriteLine("The first name is valid");
