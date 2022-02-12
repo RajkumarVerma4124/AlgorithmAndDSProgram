@@ -20,7 +20,10 @@ namespace AlgorithmAndDSProgram
             Console.WriteLine("The permutation of the given string : {0}", permFirstStr);
             Perform.StringPermutation(permFirstStr, 0, permFirstStr.Length - 1);
             Console.ReadLine();
+        }
 
+        public static void TwoStringArray()
+        {
             //Check if arrays return by two string is equal or not
             Console.WriteLine("Array Return by two string are equal or not\n");
             Console.Write("Enter First String : ");
@@ -31,7 +34,7 @@ namespace AlgorithmAndDSProgram
             //Converting the string to char array
             char[] charsOne = firstString.ToCharArray();
             char[] charsTwo = secondString.ToCharArray();
-            
+
             //Cheking the arrays return by two strings are equal or not
             if (Perform.CheckTwoStrings(charsOne, charsTwo))
                 Console.WriteLine("Strings are equal\n");

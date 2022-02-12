@@ -25,8 +25,10 @@ namespace AlgorithmAndDSProgram
                     switch (choice)
                     {
                         case 1:
-                            //Calling the string permutation method
+                            //Calling the string permutation method to prmute string
                             PermutationProgram.StringPermute();
+                            //Callingthe string permutation method to compare two strings array
+                            PermutationProgram.TwoStringArray();
                             break;
                         case 2:
                             //Calling the binary search string method
