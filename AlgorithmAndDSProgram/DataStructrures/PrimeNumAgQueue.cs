@@ -12,8 +12,9 @@ namespace AlgorithmAndDSProgram.DataStructrures
         {
             Console.WriteLine("Prime mumber anagram using queue program");
             //Creating the queue object to add anagrams
-            Queue<int> queueOne = new Queue<int>();
-            Queue<int> queueTwo = new Queue<int>();
+
+            QueueLinklist<int> queueOne = new QueueLinklist<int>();
+            QueueLinklist<int> queueTwo = new QueueLinklist<int>();
             
             //Adding the prime number in the array
             int count = 0, tempCount = 0;
@@ -48,7 +49,7 @@ namespace AlgorithmAndDSProgram.DataStructrures
             }
 
             //Printing the prime numbers 
-            Console.WriteLine("\nThe prime number that are anagram using queue are \n");
+            Console.WriteLine("\nThe prime number that are anagram using queue\n");
             queueOne.Display();
             queueTwo.Display();       
         }

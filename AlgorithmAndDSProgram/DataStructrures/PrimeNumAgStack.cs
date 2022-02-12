@@ -41,8 +41,8 @@ namespace AlgorithmAndDSProgram.DataStructrures
                     string strPrimeTwo = primeNumber[i];
                     if (Perform.IsAnagram(strPrimeOne, strPrimeTwo))
                     {
-                        stackListOne.AddFirst(Convert.ToInt32(strPrimeOne));
-                        stackListTwo.AddFirst(Convert.ToInt32(strPrimeTwo));
+                        stackListOne.Push(Convert.ToInt32(strPrimeOne));
+                        stackListTwo.Push(Convert.ToInt32(strPrimeTwo));
                     }
                 }
                 count++;

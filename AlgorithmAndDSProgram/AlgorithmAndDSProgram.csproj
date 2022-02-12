@@ -56,6 +56,10 @@
     <Compile Include="DataStructrures\PrimeNumAgStack.cs" />
     <Compile Include="DataStructrures\PrimeNumAnagramProgram.cs" />
     <Compile Include="DataStructrures\PrimeNumber2DProgram.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="DataStructrures\QueueLinklist.cs" />
+>>>>>>> UC14_DataStrutures
     <Compile Include="DataStructrures\SimulateBanking.cs" />
     <Compile Include="DataStructrures\DSProgram.cs" />
     <Compile Include="DataStructrures\Node.cs" />
